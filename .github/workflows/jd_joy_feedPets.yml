@@ -6,7 +6,7 @@ name: jd_joy_feedPets
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/20 */1 * * *'
+    - cron: '*/20 */2 * * *'
   watch:
     types: [started]
   repository_dispatch:
@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone -b master https://github.com/lxk0301/jd_scripts.git ~/jd_scripts
+          git clone -b master https://github.com/iovejrj/JDActions.git ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
